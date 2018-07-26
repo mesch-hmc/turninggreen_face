@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import FrontPage from './FrontPage.js';
 
 class App extends Component {
     constructor (props) {
@@ -11,10 +12,10 @@ class App extends Component {
             desc: ""
         }
     }
-
+/*
     componentDidMount () {
         console.log("Fetching...");
-        fetch("http://192.168.0.17:5000/")
+        fetch("http://192.168.0.17:3000/tips_daily")
             .then(results => {
                 console.log("Got json");
                 return results.json();
@@ -31,16 +32,18 @@ class App extends Component {
                 });
                 
     }
-
+*/
     render () {
         return (
             <div>
                 <div className="tip-of-the-day">
-                    <h2 id="tip-title"> Tip of the Day !</h2>
+                <h2 id="tip-title"> Tip of the Day !</h2>
                     <p>  {this.state.tip}  </p>
                     <p>  {this.state.desc} </p>
                 </div>
 
+		<FrontPage />
+		<FrontPage />
 
                 <div className="achievements">
                 
