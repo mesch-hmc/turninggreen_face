@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import FrontPage from './FrontPage.js';
+import FrontPage from './FrontPage/FrontPage.js';
 
 class App extends Component {
     constructor (props) {
@@ -35,20 +35,18 @@ class App extends Component {
 */
     render () {
         return (
-            <div>
+	    /*
                 <div className="tip-of-the-day">
                 <h2 id="tip-title"> Tip of the Day !</h2>
                     <p>  {this.state.tip}  </p>
                     <p>  {this.state.desc} </p>
-                </div>
+                </div> */
 
+		<div>
 		<FrontPage />
-		<FrontPage />
+		</div>
 
-                <div className="achievements">
-                
-                </div>
-            </div>
+//                <div className="achievements">  </div>
         );
     }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from './Header.js'
 import FrontPageWelcome from './FrontPageWelcome.js'
+import Header from './Header.js'
 
 class FrontPage extends Component {
 
@@ -11,11 +11,11 @@ constructor (props) {
     }
 */
     render () {
-	var background = require('./test.jpg');
+
         return (
 		<div className="front-page">
 		<Header />
-		//<FrontPageWelcome />
+		<FrontPageWelcome />
 
 		</div>
 

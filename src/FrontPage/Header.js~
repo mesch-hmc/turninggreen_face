@@ -1,0 +1,16 @@
+import React, { Component } from 'react';
+import HeaderButton from './HeaderButton.js'
+
+class Header extends Component {
+    render(){
+	return (
+
+	    // <HeaderButton />
+	    <button> b </button>
+
+	    // construct a bunch of buttons
+	);
+    }
+}
+
+export default Header;
