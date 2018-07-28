@@ -12,7 +12,7 @@ construct(props){ // name to display, also eventually should take you to appropr
 
     render(){
 	return(
-		<button className="header-button">
+		<button className="header-button" style={{fontSize:"100%"}}>
 		{this.props.value}
 	    </button>
 	);

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import FrontPage from './FrontPage/FrontPage.js';
 
+import {Route, Link} from 'react-router-dom'
+
 class App extends Component {
     constructor (props) {
         super(props);
@@ -43,7 +45,8 @@ class App extends Component {
                 </div> */
 
 		<div>
-		<FrontPage />
+		<Route exact path="/" component={FrontPage} />
+		{/*<Link to='/Front'>FrontPage</Link>*/}
 		</div>
 
 //                <div className="achievements">  </div>

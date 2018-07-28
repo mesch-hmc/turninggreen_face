@@ -5,7 +5,7 @@ class Header extends Component {
     render(){
 	return (
 	    // align left
-	    <div className="buncha-buttons">
+		<div style={{backgroundOpacity:"0", position: "fixed", width:"100%", textAlign:"right", padding:"5px"}}>
 		<HeaderButton value={"About"} />
 		<HeaderButton value={"What/How"} />
 		<HeaderButton value={"Login or Register"} />

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import FrontPageWelcome from './FrontPageWelcome.js'
 import Header from './Header.js'
+import Welcome from './Welcome.js'
+import About from './About.js'
+import Dashboard from './Dashboard.js'
+import FPLogin from './SignUp.js'
 
 class FrontPage extends Component {
 
@@ -15,8 +18,10 @@ constructor (props) {
         return (
 		<div className="front-page">
 		<Header />
-		<FrontPageWelcome />
-
+		<Welcome />
+		<About />
+		<Dashboard />
+		<FPLogin />
 		</div>
 
 
