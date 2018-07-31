@@ -39,6 +39,7 @@ class App extends Component {
         return (
 	    /*
                 <div className="tip-of-the-day">
+
                 <h2 id="tip-title"> Tip of the Day !</h2>
                     <p>  {this.state.tip}  </p>
                     <p>  {this.state.desc} </p>
