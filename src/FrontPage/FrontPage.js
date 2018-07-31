@@ -16,7 +16,7 @@ constructor (props) {
     render () {
 
         return (
-		<div className="front-page">
+		<div className="front-page" style={{fontFamily: "Arial, Helvetica, sans-serif"}}>
 		<Header />
 		<Welcome />
 		<About />
