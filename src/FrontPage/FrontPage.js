@@ -5,23 +5,22 @@ import About from './About.js'
 import Dashboard from './Dashboard.js'
 import FPLogin from './SignUp.js'
 
+const font = {
+    fontFamily: "Arial, Helvetica, sans-serif"
+};
+
 class FrontPage extends Component {
 
-    /*
-constructor (props) {
-        super(props);
-
-    }
-*/
     render () {
 
         return (
-		<div className="front-page" style={{fontFamily: "Arial, Helvetica, sans-serif"}}>
+		<div className="front-page" style={font}>
 		<Header />
 		<Welcome />
 		<About />
 		<Dashboard />
 		<FPLogin />
+
 		</div>
 
 
