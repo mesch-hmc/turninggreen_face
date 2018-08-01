@@ -8,7 +8,7 @@ services:
     ports:
       - "5000:3000"
     volumes:
-      - ./frontend:/app
+      - ./src:/app
     environment:
       NODE_ENV: development
 volumes:

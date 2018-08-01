@@ -4,13 +4,15 @@ const navbar = {
     position: 'fixed',
     overflow: 'hidden',
     backgroundColor: '#333',
-    width: '100%'
+    width: '100%',
+    opacity: '100%'
 };
 
 const a = {
     float: 'left',
     display: 'block',
     textAlign: 'center',
+    textDecoration: 'none',
     padding: '14px',
     color: '#FFFFFF'
 };
@@ -26,7 +28,6 @@ class Header extends Component {
 		<a href="#connect" style = {a}>Connect With Us </a>
 		</div>
 
-		// construct a bunch of buttons
 	);
     }
 }

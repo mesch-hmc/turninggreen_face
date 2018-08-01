@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 
+var img = require("./img/test.jpg");
+const welcome = {
+    backgroundImage: "url("+img+")",
+    width: "1500px",
+    height: "800px",
+    backgroundRepeat: "no-repeat"
+};
+
 class Welcome extends Component {
 
     render () {
-	var img = require('./test.jpg');
         return (	    
-		<div style={{backgroundImage: "url("+img+")", width:"100%", height: "800px", backgroundRepeat: "no-repeat"}} id="welcome">
-		<div style={{position: "absolute", top:"300px", left: "100px", color: "#FFFFFF"}}>
+		<div style={welcome} id="welcome">
+		<div style={{paddingTop:"300px", paddingLeft: "100px", color: "#FFFFFF"}}>
 		<h1> PROJECT GREEN CHALLENGE </h1>
-		<h2> Some info </h2>
+		<p> More info </p>
 		</div>
 		</div>
         );

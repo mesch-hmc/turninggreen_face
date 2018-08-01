@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import FrontPage from './FrontPage/FrontPage.js';
 
-import {Route, Link} from 'react-router-dom'
+//import {Route, Link} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 
 class App extends Component {
     constructor (props) {
@@ -14,7 +15,7 @@ class App extends Component {
             desc: ""
         }
     }
-/*
+
     componentDidMount () {
         console.log("Fetching...");
         fetch("http://192.168.0.17:3000/tips_daily")
@@ -34,7 +35,7 @@ class App extends Component {
                 });
                 
     }
-*/
+
     render () {
         return (
 	    /*
