@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import FrontPage from './FrontPage/FrontPage.js';
 
-//import {Route, Link} from 'react-router-dom'
+import FrontPage from './FrontPage/FrontPage.js';
+import LoginPage from './Login/login.js';
+import RegisterPage from './Login/register.js';
 import {Route} from 'react-router-dom'
 
 class App extends Component {
@@ -48,6 +49,8 @@ class App extends Component {
 
 		<div>
 		<Route exact path="/" component={FrontPage} />
+		<Route exact path="/login" component={LoginPage} />
+		<Route exact path="/register" component={RegisterPage} />
 		{/*<Link to='/Front'>FrontPage</Link>*/}
 		</div>
 

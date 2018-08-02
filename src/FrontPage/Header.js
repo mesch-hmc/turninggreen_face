@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import HeaderLink from './HeaderLink.js';
+
 const navbar = {
     position: 'fixed',
     overflow: 'hidden',
@@ -8,24 +10,14 @@ const navbar = {
     opacity: '100%'
 };
 
-const a = {
-    float: 'left',
-    display: 'block',
-    textAlign: 'center',
-    textDecoration: 'none',
-    padding: '14px',
-    color: '#FFFFFF'
-};
-
 class Header extends Component {
     render(){
 	return (
-		<div id="navbar" style={navbar}>
-		<a href="#welcome" style = {a}>Home</a>
-		<a href="#about" style = {a}>About</a>
-		<a href="#dashboard" style = {a}> Track My Footprint </a>
-		<a href="#signup" style = {a}> Log in/Register</a>
-		<a href="#connect" style = {a}>Connect With Us </a>
+	    	<div id="navbar" style={navbar}>
+		<HeaderLink value={"Connect With Us"} link={"#connect"} />
+		<HeaderLink value={"Log in/Register"} link={"#signup"} />
+		<HeaderLink value={"Track My Footprint"} link={"#dashboard"} />
+		<HeaderLink value={"About"} link={"#about"} />
 		</div>
 
 	);
