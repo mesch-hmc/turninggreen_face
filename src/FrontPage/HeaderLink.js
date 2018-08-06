@@ -8,6 +8,7 @@ const norm = {
     margin: '14px',
     color: '#FFFFFF'
 };
+
 const highlight={
     float: 'right',
     display: 'block',
@@ -27,7 +28,7 @@ class HeaderLink extends Component {
 	};
     }
 
-    toggleHover = () => {
+    toggleHover (event){
 	this.setState({ hover: !this.state.hover});
     }
 
@@ -39,7 +40,7 @@ class HeaderLink extends Component {
 	    depends = norm;
 	}
 	return (
-		<a style={depends} href={this.props.link} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}> {this.props.value} </a>
+		<a style={depends} href={this.props.link} onMouseEnter={() => this.toggleHover()} onMouseLeave={() =>this.toggleHover()}> {this.props.value} </a>
 	);
     }
 }

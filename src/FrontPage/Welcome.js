@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 var img = require("./img/test.jpg");
 const welcome = {
     backgroundImage: "url("+img+")",
-    width: "1500px",
-    height: "800px",
-    backgroundRepeat: "no-repeat"
+    backgroundSize: "cover",
+    width: "100%",
+    height: "600px"
 };
 
 class Welcome extends Component {
@@ -15,7 +15,8 @@ class Welcome extends Component {
 		<div style={welcome} id="welcome">
 		<div style={{paddingTop:"300px", paddingLeft: "100px", color: "#FFFFFF"}}>
 		<h1> PROJECT GREEN CHALLENGE </h1>
-		<p> More info </p>
+		<p> A Very motivational blurb about PGC </p>
+		
 		</div>
 		</div>
         );

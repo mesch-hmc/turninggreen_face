@@ -6,6 +6,12 @@ import LoginPage from './Login/login.js';
 import RegisterPage from './Login/register.js';
 import {Route} from 'react-router-dom'
 
+const app = {
+    fontFamily: "Arial, Helvetica, sans-serif",
+    maxWidth: "960px",
+    margin: "auto"
+};
+
 class App extends Component {
     constructor (props) {
         super(props);
@@ -19,7 +25,7 @@ class App extends Component {
 
     componentDidMount () {
         console.log("Fetching...");
-        fetch("http://192.168.0.17:3000/tips_daily")
+	fetch("http://192.168.0.14:3000/tips_daily")
             .then(results => {
                 console.log("Got json");
                 return results.json();
@@ -39,22 +45,13 @@ class App extends Component {
 
     render () {
         return (
-	    /*
-                <div className="tip-of-the-day">
 
-                <h2 id="tip-title"> Tip of the Day !</h2>
-                    <p>  {this.state.tip}  </p>
-                    <p>  {this.state.desc} </p>
-                </div> */
-
-		<div>
+		<div style={app}>
 		<Route exact path="/" component={FrontPage} />
 		<Route exact path="/login" component={LoginPage} />
 		<Route exact path="/register" component={RegisterPage} />
-		{/*<Link to='/Front'>FrontPage</Link>*/}
 		</div>
 
-//                <div className="achievements">  </div>
         );
     }
 }
