@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Header from './Header.js'
 import Welcome from './Welcome.js'
 import About from './About.js'
@@ -11,7 +12,7 @@ class FrontPage extends Component {
     render () {
 
         return (
-	    <body>
+		<body>
 		<Header />
 		<Welcome />
 		<About />

@@ -7,10 +7,10 @@ import {Link} from 'react-router-dom'
 var img = require("./img/sky.jpg");
 const signup = {
     backgroundImage: "url("+img+")",
-    maxWidth: "100%",
-    height: "300px",
-    textAlign: "center",
-    padding: "50px"
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    color: "#000000",
+    textAlign: "center"
 };
 
 const registerButton = {

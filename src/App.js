@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
+//import {Navbar, Nav, NavItem} from 'react-bootstrap';
+
+import Routes from "./Routes";
+
 import './App.css';
-
 import './styles.css';
-
-import FrontPage from './FrontPage/FrontPage.js';
-import LoginPage from './Login/login.js';
-import RegisterPage from './Login/register.js';
-import {Route} from 'react-router-dom'
 
 class App extends Component {
     constructor (props) {
@@ -42,15 +40,12 @@ class App extends Component {
     render () {
         return (
 
-		<div>
-		<Route exact path="/" component={FrontPage} />
-		<Route exact path="/login" component={LoginPage} />
-		<Route exact path="/register" component={RegisterPage} />
+		<div class="App container">
+		<Routes />
 		</div>
 
         );
     }
 }
-
 
 export default App;

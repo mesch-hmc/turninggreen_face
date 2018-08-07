@@ -5,7 +5,7 @@ const norm = {
     display: 'inline-block',
     textAlign: 'center',
     textDecoration: 'none',
-    margin: '14px',
+    margin: '20px',
     color: '#FFFFFF',
     maxWidth: "25%"
 };
@@ -15,7 +15,7 @@ const highlight={
     display: 'inline-block',
     textAlign: 'center',
     textDecoration: 'none',
-    margin: '14px',
+    margin: '20px',
     color: '#FFFFFF',
     borderTopStyle: 'solid',
     borderBottomStyle: 'solid',
