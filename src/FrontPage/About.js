@@ -1,18 +1,24 @@
 import React, {Component} from 'react';
 
-const about = {
-    padding: "30px",
-    maxWidth:"100%",
-    height:"600px",
+const aboutScreen = {
+    color: "#000000",
+    backgroundColor: "#FFFFFF"
+}
+const aboutContent = {
     textAlign: "center"
-    };
+};
 
 class About extends Component {
     render(){
 	return(
-		<div style={about} id="about">
-		<h1> ABOUT </h1>
-		<h2> More info </h2>
+		<div id="about" class="fullScreen" style={aboutScreen}>
+		<div class="screenWrapper">
+		<div class="screenContent" style={aboutContent}>
+		<h3> ABOUT </h3>
+		<br />
+		<p> More info </p>
+		</div>
+		</div>
 		</div>
 	);
     }

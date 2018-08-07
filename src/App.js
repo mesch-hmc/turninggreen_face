@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import './styles.css';
+
 import FrontPage from './FrontPage/FrontPage.js';
 import LoginPage from './Login/login.js';
 import RegisterPage from './Login/register.js';
 import {Route} from 'react-router-dom'
-
-const app = {
-    fontFamily: "Arial, Helvetica, sans-serif",
-    maxWidth: "960px",
-    margin: "auto"
-};
 
 class App extends Component {
     constructor (props) {
@@ -46,7 +42,7 @@ class App extends Component {
     render () {
         return (
 
-		<div style={app}>
+		<div>
 		<Route exact path="/" component={FrontPage} />
 		<Route exact path="/login" component={LoginPage} />
 		<Route exact path="/register" component={RegisterPage} />

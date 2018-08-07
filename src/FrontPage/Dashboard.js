@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
 
 const dash = {
-    background: "#39465B",
-    maxWidth: "100%",
-    height: "600px",
-    textAlign: "center",
-    padding: "30px",
-    color: "#FFFFFF"
+    backgroundColor: "#39465B",
+    textAlign: "center"
 };
 
 class Dashboard extends Component {
     render(){
 	// var img = require();
 	return(
-		<div style={dash} id="dashboard">
+		<div id="dashboard" class="fullScreen" style={dash}>
+		<div class="screenWrapper">
+		<div class="screenContent">
 		<h1> Dashboard </h1>
+		</div>
+		</div>
 		</div>
 	);
     }

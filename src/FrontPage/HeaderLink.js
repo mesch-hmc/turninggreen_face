@@ -1,23 +1,25 @@
 import React, {Component} from 'react';
 
 const norm = {
-    float: 'right',
-    display: 'block',
+//    float: 'right',
+    display: 'inline-block',
     textAlign: 'center',
     textDecoration: 'none',
     margin: '14px',
-    color: '#FFFFFF'
+    color: '#FFFFFF',
+    maxWidth: "25%"
 };
 
 const highlight={
-    float: 'right',
-    display: 'block',
+//    float: 'right',
+    display: 'inline-block',
     textAlign: 'center',
     textDecoration: 'none',
     margin: '14px',
     color: '#FFFFFF',
     borderTopStyle: 'solid',
-    borderBottomStyle: 'solid'
+    borderBottomStyle: 'solid',
+    maxWidth: "25%"
 };
 
 class HeaderLink extends Component {

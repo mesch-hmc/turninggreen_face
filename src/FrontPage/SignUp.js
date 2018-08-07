@@ -21,13 +21,14 @@ const registerButton = {
     textAlign: "center",
     color: "#FFFFFF",
     textDecoration: "none",
-    lineHeight: "33px",
+    lineHeight: "33px"
 };
 
 class FPLogin extends Component{
     render(){
 	return(
-		<div style={signup} id="signup">
+		<div style={signup} id="signup" class="fullScreen">
+		<div class="screenWrapper">
 		<br />
 		<h1> INTERESTED IN OUR MISSION? </h1>
 		<br />
@@ -37,6 +38,7 @@ class FPLogin extends Component{
 		<br />
 		Already have an account?
 		{<Link to='/login'> Login here </Link>}
+	    </div>
 		</div>
 		);
     }
