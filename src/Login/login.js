@@ -1,9 +1,12 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { FormGroup, FormControl} from "react-bootstrap";
+import {Link} from 'react-router-dom';
+import {Auth} from "aws-amplify";
 
+import LoaderButton from './LoaderButton';
+import Header from '../FrontPage/Header.js';
 import "./Login.css";
 
-import Header from '../FrontPage/Header.js';
 
 const loginPage = {
     backgroundColor: "white",
@@ -13,12 +16,13 @@ const loginPage = {
 
 export default class Login extends Component {
   constructor(props) {
-    super(props);
+     super(props);
 
-    this.state = {
-      email: "",
-      password: ""
-    };
+      this.state = {
+	  isLoading: false,
+	  email: "",
+	  password: ""
+      };
   }
 
   validateForm() {
@@ -31,8 +35,18 @@ export default class Login extends Component {
     });
   }
 
-  handleSubmit = event => {
-    event.preventDefault();
+  handleSubmit = async event => {
+      event.preventDefault();
+
+      this.setState({isLoading: true});
+      try {
+	  await Auth.signIn(this.state.email, this.state.password);
+	  this.props.userHasAuthenticated(true);
+	  this.props.history.push("/");
+      } catch (e) {
+	  alert(e.message);
+	  this.setState({ isLoading: false });
+      }
   }
 
   render() {
@@ -45,33 +59,34 @@ export default class Login extends Component {
 	      
               <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="email" bsSize="large">
-            <ControlLabel>Email</ControlLabel>
             <FormControl
               autoFocus
               type="email"
               value={this.state.email}
-              onChange={this.handleChange}
+          onChange={this.handleChange}
+	  placeholder="email@example.com"
               />
           </FormGroup>
           <FormGroup controlId="password" bsSize="large">
-            <ControlLabel>Password</ControlLabel>
             <FormControl
               value={this.state.password}
               onChange={this.handleChange}
-              type="password"
+          type="password"
+	  placeholder="password"
             />
           </FormGroup>
-          <Button
-            block
-            bsSize="large"
-            disabled={!this.validateForm()}
-            type="submit"
-          >
-            Login
-          </Button>
+	      <LoaderButton
+	  block
+	  bsSize="large"
+	  disabled={!this.validateForm()}
+	  type="submit"
+	  isLoading={this.state.isLoading}
+	  text="Login"
+	  loadingText="Logging in…"
+	  />
         </form>
 	      </div>
-	      Not registered? Create an account
+	      Not registered? {<Link to='/register'> Create an account </Link>}
 	  </div>
 	      </div>
 	      </body>

@@ -11,10 +11,15 @@ class App extends Component {
         super(props);
 
         this.state = {
+	    isAuthenticated: false,
             userName: "",
             tip: "",
             desc: ""
-        }
+        };
+    }
+
+    userHasAuthenticated = authenticated => {
+	this.setState({ isAuthenticated: authenticated});
     }
 
     componentDidMount () {
@@ -37,11 +42,19 @@ class App extends Component {
                 
     }
 
+    handleLogout = event => {
+	this.userHasAuthenticated(false);
+    }
+    
     render () {
+	const childProps={
+	    isAuthenticated: this.state.isAuthenticated,
+	    userHasAuthenticated: this.userHasAuthenticated
+	};
         return (
 
 		<div class="App container">
-		<Routes />
+		<Routes childProps = {childProps}/>
 		</div>
 
         );

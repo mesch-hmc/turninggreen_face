@@ -1,8 +1,5 @@
-// needs Signup button
-// or login
-
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 var img = require("./img/sky.jpg");
 const signup = {
