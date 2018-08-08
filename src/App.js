@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
+//import {Navbar, Nav, NavItem} from 'react-bootstrap';
+
+import Routes from "./Routes";
+
 import './App.css';
+import './styles.css';
 
 class App extends Component {
     constructor (props) {
         super(props);
 
         this.state = {
+	    isAuthenticated: false,
             userName: "",
             tip: "",
             desc: ""
-        }
+        };
+    }
+
+    userHasAuthenticated = authenticated => {
+	this.setState({ isAuthenticated: authenticated});
     }
 
     componentDidMount () {
         console.log("Fetching...");
-        fetch("http://192.168.0.17:5000/")
+	fetch("http://192.168.0.14:3000/tips_daily")
             .then(results => {
                 console.log("Got json");
                 return results.json();
@@ -32,23 +42,23 @@ class App extends Component {
                 
     }
 
+    handleLogout = event => {
+	this.userHasAuthenticated(false);
+    }
+    
     render () {
+	const childProps={
+	    isAuthenticated: this.state.isAuthenticated,
+	    userHasAuthenticated: this.userHasAuthenticated
+	};
         return (
-            <div>
-                <div className="tip-of-the-day">
-                    <h2 id="tip-title"> Tip of the Day !</h2>
-                    <p>  {this.state.tip}  </p>
-                    <p>  {this.state.desc} </p>
-                </div>
 
+		<div class="App container">
+		<Routes childProps = {childProps}/>
+		</div>
 
-                <div className="achievements">
-                
-                </div>
-            </div>
         );
     }
 }
-
 
 export default App;
