@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Dashboard, About, Welcome, MenuBar, Interested} from './components/components.js';
+import {Dashboard, About, Welcome, MenuBar, Interested, FooterPage} from './components/components.js';
 import styles from './components/style.css';
 class FrontPage extends Component {
   render() {
@@ -13,6 +13,8 @@ class FrontPage extends Component {
       <Dashboard />
       <span id="interestedAnchor" className={styles.pageAnchor}></span>
       <Interested />
+	    <span id="footerAnchor" className={styles.pageAnchor}></span>
+	    <FooterPage />
       </div>
     );
   }

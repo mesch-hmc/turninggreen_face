@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import FrontPage from './frontPage/frontPage.js';
+import FrontPage from './FrontPage/frontPage.js';
 
 class App extends Component {
     constructor (props) {

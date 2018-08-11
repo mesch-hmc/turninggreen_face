@@ -4,7 +4,7 @@ html,body {
   overflow-x: hidden;
   background-color: #111;
   color: #fff;
-  font-family: Arial, sans-serif;
+  font-family: Raleway, sans-serif;
 }
 h1, h3 {
   font-size: 4vw;
@@ -19,7 +19,7 @@ p {
 }
 .fullScreen {
   width: 100%;
-  min-height: 50vh;
+  min-height: 100vh;
   /* background-color: #ccc; */
   display: flex;
   justify-content: center;
@@ -31,9 +31,9 @@ p {
 }
 
 .navbarList {
-  font-size: 25px;
-  line-height: 1em;
-  margin: 15px 40px;
+  font-size: 21px;
+  line-height: 2em;
+  margin-top: 0px;
   text-transform: uppercase;
   text-align: center;
   position: fixed;
@@ -43,8 +43,7 @@ p {
   margin-right: auto;
   width: 100%;
   padding: 0;
-  background-color: lightgreen;
-  background-color: rgba(144,238,144,.9);
+  background-color: #7FA86F;
   z-index: 100;
 }
 .navbarList li {
@@ -58,6 +57,10 @@ p {
   color: #fff;
   text-decoration: none;
 }
+.navbarList li a:hover{
+    text-decoration:underline overline;
+}
+
 .actionButton {
   text-transform: uppercase;
   font-size: 25px;
@@ -168,6 +171,43 @@ p {
   margin-top: -25vh;
   visibility: hidden;
 }
+
+.footer{
+    width: 100%;
+    min-height: 50vh;
+    text-align: center;
+}
+
+.socialMedList{
+/*    border-top: 1px solid #ddd;*/
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    text-align: center;
+}
+
+.socialMedList li{
+    display: inline-block;
+    width: 30px;
+    padding: 15px;
+    position: relative;
+}
+
+.footerBottom{
+    width: 100%;
+    padding: 0;
+}
+
+.footerBottom li{
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    color: #494C4A;
+    font-size: 15px;
+    padding: 0px;
+}
+
 #signUpButton {
   text-align: center;
 }
@@ -201,7 +241,7 @@ p {
   flex: 1;
 }
 #dashboardScreen {
-  background-color: #004d99;
+    background-color: #39455B;
   color: white;
   overflow: visible;
 }

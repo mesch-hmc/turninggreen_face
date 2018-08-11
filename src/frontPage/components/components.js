@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import styles from './style.css';
 import testimg from './../images/plant.jpeg';
+
+import twitterIcon from './../images/twitter-icon.svg';
+import mailIcon from './../images/mail-icon.svg';
+import instagramIcon from './../images/instagram-icon.svg';
+import youtubeIcon from './../images/YouTube-icon.svg';
+import fbIcon from './../images/FB-icon.svg';
+import pinterestIcon from './../images/pinterest-icon.svg';
+
 import classNames from 'classnames';
 
 
@@ -57,11 +65,11 @@ class MenuBar extends Component {
     return (
       <div id={styles.navbar}>
         <ul className={styles.navbarList}>
-        <li><a href="#welcomeScreen">My Footprint</a></li>
+        <li><a href="#welcomeScreen">Logo</a></li>
         <li><a href="#aboutAnchor">About</a></li>
-        <li><a href="#dashboardAnchor">What/How</a></li>
-        <li><a href="#interestedAnchor">Contact Us</a></li>
-        <li><a href="#">Login/Register</a></li>
+        <li><a href="#dashboardAnchor">Track My Footprint</a></li>
+        <li><a href="#interestedAnchor">Log in/Register</a></li>
+        <li><a href="#">Connect With Us</a></li>
         </ul>
       </div>
     );
@@ -212,7 +220,7 @@ class Interested extends Component {
       <div id={styles.interestedScreen} className={styles.fullScreen}>
         <div className={styles.screenWrapper}>
           <div className={styles.screenContent}>
-          <h3>Interested in out Mission?</h3>
+          <h3>Interested in our Mission?</h3>
 
           <a class={styles.actionButton} href="#" id={styles.signUpButton}>Sign Up</a>
           <br/>
@@ -222,13 +230,40 @@ class Interested extends Component {
       </div>
     );
   }
-
 }
+
+class FooterPage extends Component {
+    render(){
+	return(
+		<div id={styles.footer}>
+		<ul className={styles.socialMedList}>
+		<br />
+		<li><a href="mailto:info@turninggreen.org"><img src={mailIcon} alt="Email"/></a></li>
+		<li><a href="https://twitter.com/turninggreenorg"> <img src={twitterIcon} alt="Twitter"/> </a> </li>
+		<li><a href="https://www.instagram.com/turninggreenorg"><img src={instagramIcon} alt="Instagram"/></a></li>
+		<li><a href="https://www.facebook.com/TGreenOrg/"><img src={fbIcon} alt="Facebook"/></a></li>
+		<li><a href="https://www.pinterest.com/teensturngree"><img src={pinterestIcon} alt="Pinterest"/></a></li>
+		<li><a href="https://www.youtube.com/user/TeensTurningGreen"><img src={youtubeIcon} alt="YouTube"/></a></li>
+		<li><a href="#">FAQ</a></li>
+		</ul>
+
+		<ul className={styles.footerBottom}>
+		<li>Ⓒ Turning Green 2015-2018</li>
+		<li> Your Contribution to Turning Green is tax deductible <br /> Our Tax ID number is 75-3106659 </li>
+		<li> A Program of Turning Green </li>
+		</ul>
+	    </div>
+	);
+    }
+}
+
+
 // export default Dashboard;
 module.exports = {
   MenuBar: MenuBar,
   Welcome: Welcome,
   About: About,
   Dashboard: Dashboard,
-  Interested: Interested
+    Interested: Interested,
+    FooterPage: FooterPage
 }
